@@ -62,7 +62,7 @@ function publicAssetExists(src: string) {
 }
 
 function HeaderLogo() {
-  if (!publicAssetExists("/logo-primary.png")) {
+  if (!publicAssetExists("/logo_primary.png")) {
     return (
       <div className="logo-placeholder" aria-label="Azure Island Story Books logo placeholder">
         <span>Azure Island</span>
@@ -73,7 +73,7 @@ function HeaderLogo() {
 
   return (
     <Image
-      src="/logo-primary.png"
+      src="/logo_primary.png"
       alt="Azure Island Story Books logo"
       width={1457}
       height={646}
@@ -85,7 +85,7 @@ function HeaderLogo() {
 }
 
 function FooterLogo() {
-  if (!publicAssetExists("/logo-white.png")) {
+  if (!publicAssetExists("/logo_secondary.png")) {
     return (
       <div className="footer-wordmark" aria-label="Azure Island Story Books">
         Azure Island Story Books
@@ -95,10 +95,10 @@ function FooterLogo() {
 
   return (
     <Image
-      src="/logo-white.png"
+      src="/logo_secondary.png"
       alt="Azure Island Story Books white logo"
-      width={300}
-      height={110}
+      width={1037}
+      height={375}
       className="footer-logo"
     />
   );
