@@ -75,10 +75,11 @@ function HeaderLogo() {
     <Image
       src="/logo-primary.png"
       alt="Azure Island Story Books logo"
-      width={520}
-      height={190}
+      width={1457}
+      height={646}
       priority
       className="header-logo"
+      sizes="(max-width: 768px) 100vw, 768px"
     />
   );
 }
@@ -130,7 +131,7 @@ export default function Home() {
           <HeaderLogo />
         </a>
         <nav className="header-nav" aria-label="Primary navigation">
-          <a href="#sample">Stories</a>
+          <a href="#stories">Stories</a>
           <a href="#pricing">Pricing</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -148,7 +149,7 @@ export default function Home() {
             <a className="button button-primary" href="#pricing">
               View Story Editions
             </a>
-            <a className="button button-secondary" href="#sample">
+            <a className="button button-secondary" href="#stories">
               View Sample Story
             </a>
           </div>
@@ -164,7 +165,7 @@ export default function Home() {
         ))}
       </section>
 
-      <section id="sample" className="content-section">
+      <section id="stories" className="content-section">
         <div className="section-heading">
           <p className="eyebrow">Sample story</p>
           <h2>Dominick&apos;s Amazing Adventure</h2>
