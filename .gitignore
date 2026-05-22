@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+node_modules
 /.pnp
 .pnp.*
 .yarn/*
@@ -15,6 +16,7 @@
 
 # next.js
 /.next/
+.next
 /out/
 
 # production
@@ -23,6 +25,10 @@
 # misc
 .DS_Store
 *.pem
+public/ASBL_1_color.png
+public/ASBL_2_bw.png
+public/LOGO_SEAL_VARIANTS.png
+public/logo.png
 
 # debug
 npm-debug.log*
@@ -32,6 +38,8 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+.env
+.env*.local
 
 # vercel
 .vercel
