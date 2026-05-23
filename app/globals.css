@@ -758,4 +758,17 @@ h1 {
   .content-section {
     padding: 3rem 0;
   }
+
+  .edition-options {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-list > div {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
 }
