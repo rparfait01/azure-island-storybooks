@@ -309,10 +309,6 @@ h1 {
   text-align: center;
 }
 
-.page-title span {
-  display: block;
-}
-
 .preview-grid,
 .pricing-grid {
   display: grid;
@@ -358,118 +354,6 @@ h1 {
 .asset-placeholder small {
   margin-top: 0.35rem;
   color: rgba(42, 42, 42, 0.62);
-}
-
-.proof-section {
-  padding-bottom: 5rem;
-}
-
-.proof-grid {
-  display: grid;
-  gap: 1.25rem;
-}
-
-.proof-card {
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(17rem, 0.75fr);
-  gap: 1.25rem;
-  align-items: center;
-  border: 1px solid rgba(27, 58, 107, 0.12);
-  border-radius: 16px;
-  background:
-    linear-gradient(180deg, rgba(251, 246, 236, 0.95), rgba(244, 237, 224, 0.88)),
-    radial-gradient(circle at top right, rgba(91, 155, 213, 0.14), transparent 18rem);
-  padding: 1rem;
-  box-shadow: 0 16px 36px rgba(19, 41, 75, 0.08);
-}
-
-.proof-image-wrap {
-  overflow: hidden;
-  border: 1px solid rgba(91, 155, 213, 0.28);
-  border-radius: 12px;
-  background: #fff;
-}
-
-.proof-image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.proof-copy {
-  padding: 0.5rem clamp(0.25rem, 2vw, 1rem);
-}
-
-.proof-copy h2 {
-  margin-bottom: 0.7rem;
-  font-size: clamp(1.35rem, 3vw, 2rem);
-  font-weight: 900;
-  line-height: 1.08;
-}
-
-.proof-copy p {
-  color: rgba(42, 42, 42, 0.76);
-  line-height: 1.65;
-}
-
-.proof-caption {
-  color: var(--navy-deep) !important;
-  font-size: 1.05rem;
-  font-weight: 900;
-}
-
-.proof-trust-line {
-  max-width: 780px;
-  margin: 1.5rem auto;
-  border: 1px solid rgba(200, 155, 60, 0.3);
-  border-radius: 999px;
-  background: rgba(251, 246, 236, 0.76);
-  color: rgba(42, 42, 42, 0.76);
-  padding: 0.85rem 1.2rem;
-  text-align: center;
-  line-height: 1.55;
-}
-
-.payment-proof-card {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 220px;
-  gap: 1.25rem;
-  align-items: center;
-  max-width: 860px;
-  margin: 0 auto;
-  border: 1px solid rgba(27, 58, 107, 0.12);
-  border-radius: 16px;
-  background: var(--cream-card);
-  padding: 1.25rem;
-  box-shadow: 0 16px 36px rgba(19, 41, 75, 0.08);
-}
-
-.payment-proof-card h2 {
-  margin-bottom: 0.75rem;
-  font-size: clamp(1.35rem, 3vw, 2rem);
-  font-weight: 900;
-}
-
-.payment-proof-card p:not(.eyebrow) {
-  color: rgba(42, 42, 42, 0.76);
-  line-height: 1.65;
-}
-
-.paypal-qr {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-  border: 1px solid rgba(27, 58, 107, 0.12);
-  border-radius: 12px;
-  background: #fff;
-  object-fit: contain;
-}
-
-.proof-actions {
-  display: flex;
-  justify-content: center;
-  margin-top: 1.5rem;
 }
 
 .pricing-section {
@@ -757,14 +641,6 @@ h1 {
     line-height: 1.08;
   }
 
-  .page-title {
-    max-width: 100%;
-    font-size: clamp(1.4rem, 6vw, 1.65rem);
-    line-height: 1.08;
-    overflow-wrap: break-word;
-    white-space: normal;
-  }
-
   .hero-actions {
     flex-direction: column;
   }
@@ -792,23 +668,8 @@ h1 {
 
   .trust-row,
   .preview-grid,
-  .pricing-grid,
-  .proof-card,
-  .payment-proof-card {
+  .pricing-grid {
     grid-template-columns: 1fr;
-  }
-
-  .proof-copy {
-    padding: 0.25rem;
-  }
-
-  .proof-trust-line {
-    border-radius: 12px;
-  }
-
-  .paypal-qr {
-    width: min(260px, 100%);
-    justify-self: center;
   }
 
   .trust-row {
