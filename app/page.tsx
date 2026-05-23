@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import Image from "next/image";
+import Link from "next/link";
 
 const trustItems = [
   {
@@ -61,49 +62,6 @@ function publicAssetExists(src: string) {
   return fs.existsSync(path.join(process.cwd(), "public", src.replace(/^\//, "")));
 }
 
-function HeaderLogo() {
-  if (!publicAssetExists("/logo_primary.png")) {
-    return (
-      <div className="logo-placeholder" aria-label="Azure Island Story Books logo placeholder">
-        <span>Azure Island</span>
-        <strong>Story Books</strong>
-      </div>
-    );
-  }
-
-  return (
-    <Image
-      src="/logo_primary.png"
-      alt="Azure Island Story Books logo"
-      width={1457}
-      height={646}
-      priority
-      className="header-logo"
-      sizes="(max-width: 768px) 100vw, 768px"
-    />
-  );
-}
-
-function FooterLogo() {
-  if (!publicAssetExists("/logo_secondary.png")) {
-    return (
-      <div className="footer-wordmark" aria-label="Azure Island Story Books">
-        Azure Island Story Books
-      </div>
-    );
-  }
-
-  return (
-    <Image
-      src="/logo_secondary.png"
-      alt="Azure Island Story Books white logo"
-      width={1037}
-      height={375}
-      className="footer-logo"
-    />
-  );
-}
-
 function PreviewCard({ src, alt, index }: { src: string; alt: string; index: number }) {
   if (!publicAssetExists(src)) {
     return (
@@ -125,18 +83,7 @@ function PreviewCard({ src, alt, index }: { src: string; alt: string; index: num
 
 export default function Home() {
   return (
-    <main className="site-shell">
-      <header className="site-header">
-        <a href="#top" className="brand-mark" aria-label="Azure Island Story Books home">
-          <HeaderLogo />
-        </a>
-        <nav className="header-nav" aria-label="Primary navigation">
-          <a href="#stories">Stories</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
-
+    <main>
       <section id="top" className="hero-section">
         <div className="hero-copy">
           <p className="eyebrow">Personalized storybooks from Okinawa</p>
@@ -146,12 +93,12 @@ export default function Home() {
             rooted in real life, family, culture, and values.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#pricing">
+            <Link className="button button-primary" href="#pricing">
               View Story Editions
-            </a>
-            <a className="button button-secondary" href="#stories">
+            </Link>
+            <Link className="button button-secondary" href="#stories">
               View Sample Story
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -185,28 +132,30 @@ export default function Home() {
         </div>
         <div className="pricing-grid">
           {editions.map((edition) => (
-            <article
-              className={`price-card${edition.featured ? " price-card-featured" : ""}`}
-              key={edition.title}
-            >
-              {edition.featured ? <span className="popular-badge">Most Popular</span> : null}
-              <h3>{edition.title}</h3>
-              <p className="page-count">{edition.pages}</p>
-              <p className="price">{edition.price}</p>
-              <p className="description">{edition.description}</p>
-              <a className="button button-card" href="mailto:hello@azureislandstorybooks.com">
-                Reserve Your Book
-              </a>
-            </article>
+            <div className="price-card-wrapper" key={edition.title}>
+              <div className="price-card-badge-row">
+                <span
+                  className={`popular-badge${edition.featured ? "" : " popular-badge-spacer"}`}
+                  aria-hidden={!edition.featured}
+                >
+                  Most Popular
+                </span>
+              </div>
+              <article
+                className={`price-card${edition.featured ? " price-card-featured" : ""}`}
+              >
+                <h3>{edition.title}</h3>
+                <p className="page-count">{edition.pages}</p>
+                <p className="price">{edition.price}</p>
+                <p className="description">{edition.description}</p>
+                <Link className="button button-card" href="/order">
+                  Reserve Your Book
+                </Link>
+              </article>
+            </div>
           ))}
         </div>
       </section>
-
-      <footer id="contact" className="site-footer">
-        <FooterLogo />
-        <p className="footer-tagline">Stories with Heart. Adventures with Purpose.</p>
-        <p>Azure Island Story Books · Personalized developmental storytelling · Okinawa, Japan</p>
-      </footer>
     </main>
   );
 }
