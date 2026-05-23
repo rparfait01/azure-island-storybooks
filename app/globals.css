@@ -341,9 +341,23 @@ h1 {
   padding-bottom: 5rem;
 }
 
+.price-card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-card-badge-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding-bottom: 0.6rem;
+}
+
 .price-card {
   position: relative;
   display: flex;
+  flex: 1;
   flex-direction: column;
   padding: 1.6rem;
 }
@@ -354,8 +368,6 @@ h1 {
 }
 
 .popular-badge {
-  align-self: flex-start;
-  margin-bottom: 1rem;
   border-radius: 999px;
   background: rgba(200, 155, 60, 0.18);
   color: var(--navy-deep);
@@ -364,6 +376,10 @@ h1 {
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.popular-badge-spacer {
+  visibility: hidden;
 }
 
 .price-card h3 {

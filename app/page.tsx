@@ -185,19 +185,27 @@ export default function Home() {
         </div>
         <div className="pricing-grid">
           {editions.map((edition) => (
-            <article
-              className={`price-card${edition.featured ? " price-card-featured" : ""}`}
-              key={edition.title}
-            >
-              {edition.featured ? <span className="popular-badge">Most Popular</span> : null}
-              <h3>{edition.title}</h3>
-              <p className="page-count">{edition.pages}</p>
-              <p className="price">{edition.price}</p>
-              <p className="description">{edition.description}</p>
-              <a className="button button-card" href="mailto:hello@azureislandstorybooks.com">
-                Reserve Your Book
-              </a>
-            </article>
+            <div className="price-card-wrapper" key={edition.title}>
+              <div className="price-card-badge-row">
+                <span
+                  className={`popular-badge${edition.featured ? "" : " popular-badge-spacer"}`}
+                  aria-hidden={!edition.featured}
+                >
+                  Most Popular
+                </span>
+              </div>
+              <article
+                className={`price-card${edition.featured ? " price-card-featured" : ""}`}
+              >
+                <h3>{edition.title}</h3>
+                <p className="page-count">{edition.pages}</p>
+                <p className="price">{edition.price}</p>
+                <p className="description">{edition.description}</p>
+                <a className="button button-card" href="mailto:hello@azureislandstorybooks.com">
+                  Reserve Your Book
+                </a>
+              </article>
+            </div>
           ))}
         </div>
       </section>
