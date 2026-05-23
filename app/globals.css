@@ -44,7 +44,7 @@ a {
 }
 
 .site-shell {
-  min-height: 100vh;
+  flex: 1;
   overflow: hidden;
 }
 
