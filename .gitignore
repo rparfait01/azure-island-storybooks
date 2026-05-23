@@ -30,6 +30,10 @@ public/ASBL_2_bw.png
 public/LOGO_SEAL_VARIANTS.png
 public/logo.png
 
+# Local handoff brief / asset staging — do not commit
+CLAUDE_CODE_HANDOFF.md
+/assets-to-add/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
