@@ -416,12 +416,71 @@ h1 {
   margin-top: auto;
 }
 
-.order-section {
+.order-section,
+.privacy-section {
   padding-bottom: 5rem;
 }
 
-.order-section .section-heading {
+.order-section .section-heading,
+.privacy-section .section-heading {
   text-align: left;
+}
+
+.privacy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.privacy-card {
+  border: 1px solid rgba(27, 58, 107, 0.12);
+  border-radius: 16px;
+  background: var(--cream-card);
+  padding: 1.6rem 1.75rem;
+  box-shadow: 0 16px 36px rgba(19, 41, 75, 0.06);
+}
+
+.privacy-card h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.privacy-card p,
+.privacy-card li {
+  color: rgba(42, 42, 42, 0.82);
+  line-height: 1.65;
+}
+
+.privacy-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.privacy-card li + li {
+  margin-top: 0.4rem;
+}
+
+.privacy-footnote {
+  margin-top: 1.75rem;
+  padding: 1.5rem 1.75rem;
+  border-radius: 16px;
+  background: rgba(91, 155, 213, 0.12);
+  border: 1px solid rgba(27, 58, 107, 0.12);
+}
+
+.privacy-footnote p {
+  margin: 0;
+  color: var(--navy-deep);
+  line-height: 1.6;
+}
+
+.privacy-footnote a {
+  color: var(--navy);
+  font-weight: 800;
+  text-decoration: underline;
 }
 
 .order-page {
@@ -770,5 +829,9 @@ h1 {
   .review-list > div {
     grid-template-columns: 1fr;
     gap: 0.25rem;
+  }
+
+  .privacy-grid {
+    grid-template-columns: 1fr;
   }
 }
