@@ -416,6 +416,256 @@ h1 {
   margin-top: auto;
 }
 
+.order-section {
+  padding-bottom: 5rem;
+}
+
+.order-section .section-heading {
+  text-align: left;
+}
+
+.order-page {
+  display: grid;
+  gap: 2rem;
+}
+
+.order-form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.order-form fieldset {
+  border: 1px solid rgba(27, 58, 107, 0.12);
+  border-radius: 16px;
+  background: var(--cream-card);
+  padding: 1.5rem 1.5rem 1.75rem;
+  box-shadow: 0 16px 36px rgba(19, 41, 75, 0.06);
+}
+
+.order-form legend {
+  padding: 0 0.5rem;
+  color: var(--navy);
+  font-size: 1.05rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+.field > span {
+  color: var(--navy);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border: 1px solid rgba(27, 58, 107, 0.22);
+  border-radius: 10px;
+  background: #fff;
+  padding: 0.75rem 0.9rem;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(200, 155, 60, 0.18);
+  outline: none;
+}
+
+.edition-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.edition-option {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  border: 1px solid rgba(27, 58, 107, 0.18);
+  border-radius: 12px;
+  background: #fff;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.edition-option:hover {
+  border-color: var(--gold);
+}
+
+.edition-option-selected {
+  border-color: var(--gold);
+  background: rgba(200, 155, 60, 0.08);
+}
+
+.edition-option input {
+  margin-top: 0.25rem;
+}
+
+.edition-option div {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.edition-option strong {
+  color: var(--navy);
+  font-size: 1rem;
+}
+
+.edition-option span {
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.add-ons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--navy);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.checkbox input {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.order-review,
+.order-payment {
+  border: 1px solid rgba(27, 58, 107, 0.12);
+  border-radius: 16px;
+  background: var(--cream-card);
+  padding: 1.75rem;
+  box-shadow: 0 16px 36px rgba(19, 41, 75, 0.06);
+}
+
+.order-review h2,
+.order-payment h2 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.review-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.review-list > div {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px dashed rgba(27, 58, 107, 0.12);
+}
+
+.review-list > div:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.review-list dt {
+  color: var(--navy);
+  font-weight: 800;
+}
+
+.review-list dd {
+  margin: 0;
+  color: var(--ink);
+}
+
+.review-list em {
+  color: rgba(42, 42, 42, 0.55);
+  font-style: italic;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) 1fr;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.paypal-block {
+  display: grid;
+  justify-items: center;
+  gap: 0.6rem;
+}
+
+.paypal-qr {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: 12px;
+  background: #fff;
+  padding: 0.5rem;
+  box-shadow: 0 12px 28px rgba(19, 41, 75, 0.1);
+}
+
+.paypal-caption {
+  margin: 0;
+  color: var(--navy);
+  font-weight: 800;
+  text-align: center;
+}
+
+.confirm-block {
+  display: grid;
+  gap: 1rem;
+}
+
+.confirm-block p {
+  margin: 0;
+  color: rgba(42, 42, 42, 0.85);
+  line-height: 1.6;
+}
+
+.confirm-block .button {
+  justify-self: flex-start;
+}
+
+.button-disabled {
+  background: rgba(27, 58, 107, 0.35);
+  color: rgba(255, 255, 255, 0.85);
+  cursor: not-allowed;
+  pointer-events: auto;
+  box-shadow: none;
+}
+
+.button-disabled:hover {
+  background: rgba(27, 58, 107, 0.35);
+  transform: none;
+}
+
+.confirm-hint {
+  margin: 0;
+  color: var(--coral);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 .site-footer {
   display: grid;
   justify-items: center;
