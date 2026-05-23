@@ -483,6 +483,207 @@ h1 {
   text-decoration: underline;
 }
 
+.samples-index .section-heading {
+  text-align: left;
+}
+
+.samples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.sample-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(27, 58, 107, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--cream-card);
+  box-shadow: 0 16px 36px rgba(19, 41, 75, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.sample-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 48px rgba(19, 41, 75, 0.14);
+}
+
+.sample-card-image {
+  background: #fff;
+  padding: 0.6rem;
+  border-bottom: 1px solid rgba(27, 58, 107, 0.08);
+}
+
+.sample-card-image-inner {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.sample-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.25rem 1.4rem 1.4rem;
+}
+
+.sample-card-body h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.sample-card-body p {
+  margin: 0;
+  color: rgba(42, 42, 42, 0.78);
+  line-height: 1.55;
+}
+
+.sample-card-cta {
+  margin-top: 0.25rem;
+  color: var(--gold);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.sample-page {
+  padding-bottom: 4.5rem;
+}
+
+.sample-page-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: start;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(27, 58, 107, 0.14);
+}
+
+.sample-page-heading h1 {
+  margin: 0.25rem 0 0.75rem;
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  line-height: 1.05;
+}
+
+.sample-page-purpose {
+  max-width: 640px;
+  margin: 0;
+  color: rgba(42, 42, 42, 0.82);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.sample-page-logo {
+  display: inline-flex;
+}
+
+.sample-page-logo-image {
+  width: clamp(80px, 12vw, 120px);
+  height: auto;
+  object-fit: contain;
+}
+
+.sample-page-body {
+  margin-bottom: 2rem;
+}
+
+.sample-page-back {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sample-spread {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+.sample-text-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid rgba(27, 58, 107, 0.12);
+  border-radius: 16px;
+  background: var(--cream-card);
+  padding: 2rem 2.1rem;
+  box-shadow: 0 16px 36px rgba(19, 41, 75, 0.06);
+}
+
+.sample-text-card h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.sample-text-card p {
+  margin: 0;
+  color: rgba(42, 42, 42, 0.85);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.sample-illustration-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border: 1px solid rgba(27, 58, 107, 0.12);
+  border-radius: 16px;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 16px 36px rgba(19, 41, 75, 0.08);
+}
+
+.sample-illustration-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.proof-figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 0;
+}
+
+.proof-image-frame {
+  border: 1px solid rgba(27, 58, 107, 0.12);
+  border-radius: 16px;
+  background: #fff;
+  padding: 0.85rem;
+  box-shadow: 0 16px 36px rgba(19, 41, 75, 0.08);
+}
+
+.proof-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.proof-figure figcaption {
+  color: var(--navy);
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
 .order-page {
   display: grid;
   gap: 2rem;
@@ -832,6 +1033,23 @@ h1 {
   }
 
   .privacy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .samples-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sample-page-header {
+    grid-template-columns: 1fr;
+  }
+
+  .sample-page-logo {
+    justify-self: flex-start;
+  }
+
+  .sample-spread,
+  .proof-grid {
     grid-template-columns: 1fr;
   }
 }
