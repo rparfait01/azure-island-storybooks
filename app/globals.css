@@ -1053,3 +1053,13 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+.footer-contact a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-contact a:hover {
+  color: var(--azure, #5b9bd5);
+}
