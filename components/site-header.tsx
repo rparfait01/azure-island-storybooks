@@ -4,8 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 const navItems = [
-  { label: "Stories", href: "/#stories" },
-  { label: "Pricing", href: "/#pricing" },
+  { label: "Stories", href: "/stories" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "For Every Occasion", href: "/occasions" },
   { label: "Sample Stories", href: "/samples" },
   { label: "Order", href: "/order" },
   { label: "Privacy", href: "/privacy" },

@@ -32,6 +32,11 @@ export default function SiteFooter() {
       <FooterLogo />
       <p className="footer-tagline">Stories with Heart. Adventures with Purpose.</p>
       <p>Azure Island Story Books · Personalized developmental storytelling · Okinawa, Japan</p>
+      <p className="footer-contact">
+        <a href="mailto:summitpublications@summitstrategiesgroup.org">
+          summitpublications@summitstrategiesgroup.org
+        </a>
+      </p>
     </footer>
   );
 }
